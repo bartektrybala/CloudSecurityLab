@@ -52,7 +52,7 @@ def send_k0_and_k1_to_receiver_and_wait_for_response(
         finish_response = s.recv(PREFIX_FIXED_SIZE)
         if finish_response == FINISH_PROTOCOL_PREFIX:
             s.close()
-            print("Sender finished protocol")
+            # print("Sender finished protocol")
         else:
             raise ValueError("Sender did not finish protocol")
 

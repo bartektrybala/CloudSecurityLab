@@ -13,7 +13,7 @@ from one_of_two.settings import BUFFER_SIZE, HOST, PORT
 receiver_secret_keys = [mcl.Fr.rnd() for _ in range(l)]
 
 choice = secrets.choice([i for i in range(N)])
-choice_in_binary = format(choice, "b").zfill(3)
+choice_in_binary = format(choice, "b").zfill(l)
 print(f"choice: {choice}, {choice_in_binary}")
 
 extracted_sender_keys = []
@@ -24,7 +24,6 @@ for index_j, receiver_secret_key in enumerate(receiver_secret_keys):
     )
     extracted_sender_keys.append(key)
 
-print(f"extracted_sender_keys: {extracted_sender_keys}")
 
 # get derived values from sender
 derived_values_Y = []
@@ -50,4 +49,3 @@ message = xor_bytes(
     ba1=derived_values_Y[choice],
     ba2=xor_all_elements(fks_reverse_list),
 )
-print(f"message: {message}")

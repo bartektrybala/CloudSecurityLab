@@ -13,9 +13,6 @@ from one_of_two.settings import BUFFER_SIZE, HOST, PORT
 messages_X = [mcl.Fr.rnd().serialize() for _ in range(N)]
 keys = [(mcl.Fr.rnd(), mcl.Fr.rnd()) for _ in range(l)]
 
-print("messages:")
-print(messages_X)
-
 derived_values_Y = []
 for index_I, message_I in enumerate(messages_X):
     index_I_in_binary = format(index_I, "b").zfill(l)

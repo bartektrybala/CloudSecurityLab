@@ -86,7 +86,7 @@ def receiver_run_1_of_2_oblivious_transfer(
                         sender_public_key=sender_public_key,
                     )
                     send_finish_response(conn=conn)
-                    print("Receiver finished protocol")
+                    # print("Receiver finished protocol")
                     break
     return mc
 
