@@ -2,14 +2,13 @@ import os
 from hashlib import sha256
 from pathlib import Path
 
-from rich import print
-
 from challenge import agg_gen_challange
 from file import compute_sha256_of
 from generator import SubgroupGenerator
 from mcl import G1, Fr
 from my_types import ServerChallenge
 from polynomial import agg_poly
+from rich import print
 from settings import NUMBER_OF_PAGES, PAGE_SIZE
 from tag_block import tag_block
 from upload import send_block_file, send_challange_and_wait_for_response

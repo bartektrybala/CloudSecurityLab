@@ -2,8 +2,6 @@ import pickle
 import socket
 
 import mcl
-from rich import print
-
 from one_of_two.consts import public_g
 from one_of_two.my_types import Ek0AndEk1
 from one_of_two.settings import (
@@ -15,6 +13,7 @@ from one_of_two.settings import (
     PREFIX_FIXED_SIZE,
     PUBLIC_KEY_PREFIX,
 )
+from rich import print
 
 
 def send_public_key_and_wait_for_calculated_b(public_key: mcl.G1) -> mcl.G1:

@@ -5,10 +5,9 @@ from hashlib import sha256
 from pathlib import Path
 from typing import cast
 
-from rich import print
-
 from challenge import agg_gen_proof
 from my_types import ServerChallenge, TaggedBlock
+from rich import print
 from settings import (
     CHALLANGE_PREFIX,
     FILE_PREFIX,

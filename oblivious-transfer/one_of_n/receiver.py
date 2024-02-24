@@ -3,12 +3,11 @@ import socket
 
 import mcl
 from cryptography.hazmat.primitives import hashes, hmac
-from rich import print
-
 from one_of_n.consts import N, l
 from one_of_n.utils import xor_all_elements, xor_bytes
 from one_of_two.receiver import receiver_run_1_of_2_oblivious_transfer
 from one_of_two.settings import BUFFER_SIZE, HOST, PORT
+from rich import print
 
 receiver_secret_keys = [mcl.Fr.rnd() for _ in range(l)]
 

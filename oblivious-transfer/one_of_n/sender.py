@@ -3,12 +3,11 @@ import time
 
 import mcl
 from cryptography.hazmat.primitives import hashes, hmac
-from rich import print
-
 from one_of_n.consts import N, l
 from one_of_n.utils import xor_all_elements, xor_bytes
 from one_of_two.sender import sender_run_1_of_2_oblivious_transfer
 from one_of_two.settings import BUFFER_SIZE, HOST, PORT
+from rich import print
 
 messages_X = [mcl.Fr.rnd().serialize() for _ in range(N)]
 keys = [(mcl.Fr.rnd(), mcl.Fr.rnd()) for _ in range(l)]

@@ -1,18 +1,19 @@
 import pickle
 import socket
 from typing import cast
+
 import mcl
+from my_types import ClientAndServerBlindedSets
 from rich import print
-from utils import hash_set_to_fr, secure_shuffled, encrypt_set, hash_set_to_g1
 from settings import (
     BUFFER_SIZE,
+    CLIENTS_SET_PREFIX,
+    ENCRYPTED_SETS_PREFIX,
     HOST,
     PORT,
-    CLIENTS_SET_PREFIX,
     PREFIX_FIXED_SIZE,
-    ENCRYPTED_SETS_PREFIX,
 )
-from my_types import ClientAndServerBlindedSets
+from utils import encrypt_set, hash_set_to_fr, hash_set_to_g1, secure_shuffled
 
 
 def receive_client_set(conn: socket.socket) -> list[mcl.G1]:

@@ -3,10 +3,9 @@ import socket
 import struct
 from typing import cast
 
-from rich import print
-
 from mcl.structures.G1 import G1
 from my_types import ServerChallenge, TaggedBlock
+from rich import print
 from settings import CHALLANGE_PREFIX, FILE_PREFIX, HOST, PAGE_SIZE, PORT
 
 

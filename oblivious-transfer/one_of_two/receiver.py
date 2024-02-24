@@ -4,8 +4,6 @@ import socket
 from typing import Literal, cast
 
 import mcl
-from rich import print
-
 from one_of_two.consts import public_g
 from one_of_two.my_types import Ek0AndEk1
 from one_of_two.settings import (
@@ -17,6 +15,7 @@ from one_of_two.settings import (
     PREFIX_FIXED_SIZE,
     PUBLIC_KEY_PREFIX,
 )
+from rich import print
 
 
 def get_senders_public_key(conn: socket.socket) -> mcl.G1():

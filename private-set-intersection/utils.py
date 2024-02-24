@@ -1,7 +1,7 @@
-import mcl
 import secrets
 from typing import TypeVar
 
+import mcl
 
 T = TypeVar("T")
 

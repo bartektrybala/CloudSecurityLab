@@ -1,19 +1,19 @@
 import pickle
 import socket
 from typing import cast
+
 import mcl
+from my_types import ClientAndServerBlindedSets
 from rich import print
 from settings import (
     BUFFER_SIZE,
+    CLIENTS_SET_PREFIX,
     ENCRYPTED_SETS_PREFIX,
     HOST,
     PORT,
-    CLIENTS_SET_PREFIX,
     PREFIX_FIXED_SIZE,
 )
-from utils import encrypt_set, hash_set_to_g1, decrypt_set, hash_set_to_fr
-
-from my_types import ClientAndServerBlindedSets
+from utils import decrypt_set, encrypt_set, hash_set_to_fr, hash_set_to_g1
 
 
 def send_dervied_set_to_server_and_wait_for_response(
