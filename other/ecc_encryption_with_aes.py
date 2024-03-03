@@ -4,14 +4,7 @@ from cryptography.hazmat.primitives import padding
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
-
-class Person:
-    secret_key: ec.EllipticCurvePrivateKey
-    public_key: ec.EllipticCurvePublicKey
-
-    def __init__(self):
-        self.secret_key = ec.generate_private_key(curve=ec.BrainpoolP256R1())
-        self.public_key = self.secret_key.public_key()
+from person import Person
 
 
 client = Person()
